@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Question Page</title>
+    <title>Selection Menu</title>
 </head>
-<body>
 
+<body>
+    <h1>Quizfrage</h1>
+
+    #In: Var.Quiz
+
+    <p>{{quizzquestion}}</p>
+
+    <form action="/question_page" method="POST">
+
+
+
+        <label>Antwort:</label><br>
+        <textarea name="quizantwort"></textarea><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+    <br>
+
+    <a href="/entry">Zurück zur Startseite</a>
+
+#Quizpage
+
+#In: Var.user
+
+#In: Var.Quiz.txt
+#Out: Var.Answer
 </body>
 </html>
