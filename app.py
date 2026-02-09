@@ -14,5 +14,9 @@ def selection_menu(username):
 def quizzes(username, quizzID, quizz_content):
     return render_template("question_page.html", username=username, quizzID=quizzID, quizz_content=quizz_content)
 
+@app.route("/question_page_test")
+def quizzes_test():
+    return render_template("question_page.html", quizzquestion="test")
+
 if __name__ == "__main__":
     app.run(debug=True)
