@@ -1,1 +1,37 @@
-/*this page contains the styles used on the html pages*/
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+/* Flexbox container for the 3x4 grid */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 840px;
+    gap: 10px;
+}
+
+/* Individual box styling */
+.quiz-box {
+    flex: 0 0 200px;
+    height: 120px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.quiz-box:hover {
+    background-color: #2980b9;
+    cursor: pointer;
+}/*this page contains the styles used on the html pages*/

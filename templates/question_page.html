@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Selection Menu</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizfrage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>Quiz Question {{quizzID}}</h1>
 
-    <p>{{quizz_content}}</p>
+    <div class="page-wrapper">
+        <nav class="quiz-nav">
+            <a href="selection_menu.html" class="back-link">← Zurück zum Menü</a>
+            <span class="quiz-status">Quiz aktiv</span>
+        </nav>
 
-    <form action="/question_page" method="POST">
+        <main class="question-container">
+            <div class="question-card">
+                <span class="category-label">Frage Details</span>
+                <h1>Hier steht deine Quizfrage bereit?</h1>
 
-        <label>Answer:</label><br>
-        <textarea name="quizz_answer"></textarea><br><br>
+                <div class="divider"></div>
 
-        <button type="submit">Send</button>
-    </form>
-    <br>
+                <div class="answer-section">
+                    <p id="answer-text" class="hidden-answer">Das ist die korrekte Antwort!</p>
+                    <button class="reveal-btn" onclick="showAnswer()">Lösung anzeigen</button>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    <a href="/entry">Give up</a>
-
-
-#In: Var.user
+    <script>
+        function showAnswer() {
+            const text = document.getElementById('answer-text');
+            const btn = document.querySelector('.reveal-btn');
+            text.style.display = 'block';
+            btn.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
